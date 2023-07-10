@@ -111,7 +111,7 @@
     - name: Install calico network
       kubernetes.core.k8s:
         state: present
-        definition: "{{ lookup('url', 'https://docs.projectcalico.org/manifests/calico.yaml', split_lines=False) }}"
+        definition: "{{ lookup('url', 'https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml', split_lines=False) }}"
     - name: Get kubelet-config
       ansible.builtin.shell:
         cmd: |
