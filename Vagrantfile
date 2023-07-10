@@ -6,13 +6,13 @@ Vagrant.configure(2) do |config|
   base_ip_str = "10.240.0.1"
   number_cplane = 1 # Number of cplane nodes kubernetes
   cpu_cplane = 2
-  mem_cplane = 1792
-  number_worker = 1 # Number of workers nodes kubernetes
+  mem_cplane = 2048
+  number_worker = 2 # Number of workers nodes kubernetes
   cpu_worker = 1
-  mem_worker = 1024
+  mem_worker = 2048
   config.vm.box = "generic/ubuntu2204" # Image for all installations
-  kubectl_version = "1.25.3-00"
-  kube_version = "1.25.3-00"
+  kubectl_version = "1.27.3-00"
+  kube_version = "1.27.3-00"
 
 # Compute nodes
   number_machines = number_cplane + number_worker
